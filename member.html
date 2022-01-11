@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" class="export">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dope Crew Friends NFT">
+    <meta name="author" content="Nestor Caro; email@nestorcaro.com">
+    <title>DCF NFT Gallery</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="https://dopecrewfriends.com/carousel.css" rel="stylesheet">
+    <link href="https://dopecrewfriends.com/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://dopecrewfriends.com/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="dopecrew.js"></script>
+
+    <style>
+      .bg-cover {
+          width: 100%;
+          height: 300px;
+          background:url(tiger.webp), url(bg.webp);
+          background-position: center, center;
+          background-repeat: no-repeat, repeat;
+          background-size: contain;
+      }
+      .justo{
+          text-align: justify;
+      }
+      footer{
+          margin-bottom: -48px;
+      }
+      .sparda{
+          filter:invert(100%) sepia(0%) saturate(7451%) hue-rotate(101deg) brightness(115%)
+      }
+      .middle{
+          margin-top:auto;
+          margin-bottom: auto;
+      }
+      .smedia{
+          align-items: center;
+          justify-content: center;
+          display:flex;
+          font-size: x-large;
+      }
+      .wallet{
+      	  justify-content: center;
+      	  display:flex;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .crew{
+         align-items:center;
+         justify-content: center;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      .wallet{
+      	  justify-content: right;
+      	  display:flex;
+  
+          } 
+      .wallet-btn{
+      	  padding: 0.5rem 1rem;
+          font-size: 1.25rem;
+          border-radius: 0.3rem;
+      }
+      }
+    </style>
+
+  </head>
+
+<body onload="onloadInit()">
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+      <a href="index.html"><img src="favicon.ico" style="width:50px; height: 50px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#buy">Buy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#team">Team</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About DCF</a>
+          </li>            
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#next">What's Next?</a>
+          </li>                             
+          <li class="nav-item">
+            <a class="nav-link disabled">Members</a>
+          </li>
+        </ul>
+        <ul class="nav smedia">
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="https://twitter.com/DopeCrewFriends"><i class="fab fa-twitter"></i></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="https://t.me/DopeCrewFriends"><i class="fab fa-telegram"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="https://discord.gg/WgWrPqNXhz"><i class="fab fa-discord"></i></a>
+            </li>
+        </ul>             
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<main>
+	<div class="wallet mt-4">
+	  <span id="wallet-address-container" style="display:none;">
+		  <b>
+		  	 <span id="wallet-address-span" class="btn btn-outline-secondary wallet-btn"></span>
+		  </b>
+      </span>
+	  <span id="connect-button-container">
+		  <button type="button" class="btn btn-outline-secondary wallet-btn" onclick="connectAppToWallet()">Connect Wallet</button>
+      </span>  
+	</div>	
+    <div class="mt-3 mb-3">
+      <h1 class="text-center">My DCF Gallery</h1>
+    </div>
+    <div class="container">
+      <div id="gallery-container" class="row">
+      	<div class=" mb-4 bg-warning rounded-3 mt-5">
+            <div class="container-fluid py-4 text-center">
+                <h1 class="display-5 fw-bold text-center">Connect your Wallet to access</h1>
+                <p class="fs-4 text-center">Not a holder yet? get one now on SpardaWallet and/or Arky. </br><span class="fw-ligther fs-6 fst-italic"> Note: You need <a class="text-secondary" href="https://zilpay.io/">Zilpay Wallet</a> to buy/sell on Zilliqa Blockchain.</span></p>
+                <a class="btn btn-dark btn-lg btn" role="button" href="https://www.spardawallet.com/marketsearch.html?9a7847a78c6f2677ef49a30c9013027e3a1b8527">Go to Sparda</a>
+                <a class="btn btn-secondary btn-lg btn" role="button" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt">Go to Arky</a>
+            </div>
+        </div>
+      <!-- ***** Gallery Area Start ***** -->            
+      </div>
+    </div>
+    <div class="footer-dark mt-5">
+        <footer>
+            <div class="container card-footer">
+                <ul class="nav smedia">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://twitter.com/DopeCrewFriends"><i class="fab fa-twitter"></i></a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://t.me/DopeCrewFriends"><i class="fab fa-telegram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://discord.gg/WgWrPqNXhz"><i class="fab fa-discord"></i></a>
+                    </li>
+                </ul>
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p class="copyright">DopeCrewFriends.com © 2021 - Powered by <img style="width:20px;" src="https://meta.viewblock.io/ZIL/logo?t=dark" alt="ZIL Token Logo" loading="lazy"> Zilliqa</p>
+            </div>
+        </footer>
+    </div>
+</main>
+</body>
+</html>

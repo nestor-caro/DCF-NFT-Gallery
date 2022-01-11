@@ -1,220 +1,369 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Zilliqa NFT Wallet</title>
-	<style type="text/css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dope Crew Friends NFT">
+    <meta name="author" content="Nestor Caro; email@nestorcaro.com">
+    <title>Dope Crew Friends NFT</title>
 
-		body {
-			background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-		    background-size: 400% 400%;
-		}
+    <link href="carousel.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-		#gallery-container {
-			width: 60%;
-			border-width: 1px;
-			border-style: solid;
-			border-color: wheat;
-			display: flex;
-			justify-content: center;
-			flex-flow: wrap;
-		}
+    <style>
+      .bg-cover {
+          width: 100%;
+          height: 300px;
+          background:url(tiger.webp), url(bg.webp);
+          background-position: center, center;
+          background-repeat: no-repeat, repeat;
+          background-size: contain;
+      }
+      .justo{
+          text-align: justify;
+      }
+      footer{
+          margin-bottom: -48px;
+      }
+      .sparda{
+          filter:invert(100%) sepia(0%) saturate(7451%) hue-rotate(101deg) brightness(115%)
+      }
+      .middle{
+          margin: auto;
+          align-content: center;
+          position: relative;
+      }
+      .smedia{
+          align-items: center;
+          justify-content: center;
+          display:flex;
+          font-size: x-large;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .dope1, .dope2, .dope3, .dope4
+		  {
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 150px;
+			width: 150px;
+		  }
+        
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @media (min-width: 900px) {
+        .dope1, .dope2, .dope3, .dope4
+          {
+          height: 150px;
+          width: 150px;
+          }
+      }
+      @media (min-width: 1000px) {
+        .dope1, .dope2, .dope3, .dope4
+          {
+          height: 200px;
+          width: 200px;
+          }
+      }       
+      @media (min-width: 1400px) {
+        .dope1, .dope2, .dope3, .dope4
+          {
+          height: 250px;
+          width: 250px;
+          }
+      }        
+    </style>
+    <script type="text/javascript">
 
-		.nft-card {
-			width: 200px;
-			height: 260px;
-			margin: 8px;
-			padding: 1px;
-			border: solid 1px black;
-			background-color: gold;
-		}
+      $(document).ready(function() {
+          var images = ['QmQK7a27fVebrNHghYWUVVKfQKf1zMCYeFWQBx5FAEYoAf', 
+    'QmX51HTdMKDjpwGUN7a3ALGw1quqaWjh915CCXZhRdCYVH', 
+    'QmTjyEmn2LdA6zteQyaQZe77eVd8go9N1rrzr7SdYjKvSf', 
+    'QmZcZjEhrYRuLWpFucgFVA7Efy6L5Zekhu9PS9JpjVaxVY', 
+    'QmXqFHv7WJVNZvCNwMnncKV2UZTNZSbuaeTmzcHPDDQta9', 
+    'Qmd1cMzsFpyvje716T5vXVKBEXK9He8sXBYmT5myLyDzzK', 
+    'QmUD8DfG8LdLpW8BoHPo2WfDyhcpZxD5rSKyh3Zpbrh5ue', 
+    'QmbZqybXzUtxiuGaxGQzsuQ5TGTsb4fZqpwHo93fYqwjzb', 
+    'QmV1GtK3kXCJsWgqGrVUWk3LgL8vSveY2fFvgJwYKxioJ5', 
+    'QmeRiZbpvZe3YSFG3UfZPcbm4bvPjY96YizudaP8Mu94MD', 
+    'QmTGoUygb1Ai93TKXXFtwUrUAeNLUg2hYaAEMkJHdoe9uL', 
+    'QmYKjBceYSnp3epCcpKdhL2wwLzUhzaJeaVj7GvjpnoMSH', 
+    'QmVnAtoBxAbu9uxPdRAwXDQkrE4Ly788bk8wwMJeTth7qT', 
+    'QmTzHuRxSy3QNAfLFTo7qYryafMADzHav7MLG9uoLZzdtf', 
+    'QmThmBBfuAEaKTGmDyxCFquW4FGDQ6FokJybpF8dYtXSJE', 
+    'QmUK149mHKzp353mmdxAvci1oFPwWa5x2VSnNiGAGb2J3L', 
+    'QmWt1T3qqjoStnUHXnEfFwd814PLwBoyy2VeQ6kUgMeLmc', 
+    'QmSxw1QfB5dZqojD5yh5JLujthVA2E4eff9KCHL6S6TDxp', 
+    'QmZwvhhoiDbSPM8G4wosUx2jcZZkUkh6nPFnPDSbmGxA1b', 
+    'QmYwHjSjLFMvUmMHjjN4bGQp43Kfyn7SJS9Raa9fAfFaKP', 
+    'QmPrHwFm3Cn5SRx1QqruqHCusm7FCfKt89zNg9p6kq1ohy', 
+    'QmcxwBG7CvA9CjFgvrtJHdTksw2ZFu7w4CbxNJYs3VaEuC', 
+    'Qmb1tnNEr69p8uwuLz2rgNgqajTfCeqDKRFF4bocfvmijm', 
+    'QmQUZiuiqpe7zWnCt9NKeaiLve2E9F5NXnfZ56pmBrzEhh', 
+    'QmVSQDryLx4PS2F35aBUhk2ZsRpKJXJt5YsCrnFAGeBPFt', 
+    'QmV2AniBm9rFnPkrXNCAa91W5L55R1Yi7ymrxHyvTGpRxV', 
+    'QmUoftMuMvPAYaGMq6jMkxWjbWeWb87UFD5onLjF6jQqKN', 
+    'QmbNvZ5jndy9ieXPJNetQgwMqUf1ENgpHQC8BjyuBoVtaF', 
+    'QmcaHyz7LSCrFRXNrRcPt5gdVk2uFcApix5ZKukztVUPny', 
+    'QmdyFM4V2B43AGwLwW3ZVqruLuM7x4A57Tsa1fsqYZShHM', 
+    'QmQNaV6oFV49X3nryoqZ76cJsyi68foxnawNuxebpYMexJ', 
+    'QmbgRisyWiMwyXwEvrUqFvwGfhdDvmz7ATdsrq3xusQnmt', 
+    'QmR6w1UTVMpqRDPmBjUmgmWwVXp82Q3sCKENtzeSiSi97y', 
+    'Qmb76mjpuhj8PaTuCq2q9MvTGdzzQQ9bUtpz62KtM6bzfp', 
+    'Qmc11oNUSJpEE13RaPKEYsBQHWkt4CteddDGPLfqStZbD2', 
+    'QmYDhPZrZsPXR2HryhdzrUNBsuXdKHWfobNDmK72qraoHe', 
+    'QmUF1TJdAW16Fefqm54LEsBRApGcXDeDSmjmpqmNX3zYCS', 
+    'QmUfDnAfv8RP8VPkfnB3JAGpZYydvN6UuPGV627udR152W', 
+    'QmeAkck7ugQd2QKCsevzyB4yxUUFBAdH8dsffY9UhtrX2h', 
+    'QmeqVzqQENSYybvDBYFds9oQY2znEFJxBJkmtwXKapUb1F', 
+    'QmdSd9NMrhsLyh1xrjeHuYUefUzQe3YWHML4u2Z8Q7XTtL', 
+    'QmY4qsLXKyH1mtzi5H76R3Mr2S1Z8sjocZRtuKmCNcJUsQ', 
+    'QmTRevVSh6wdzsayZJP55SwFpMttgLzHBLEbHMEhMn8bKQ', 
+    'QmbfMmFmKFNpZ49TJqkreZRomj6uECNHQtMuFPUJf6jvWG', 
+    'QmbFabAdfuhAtHXT53UCBWBtYojsywM8CjiAZd2TvfNM8Q', 
+    'Qme8GiRvH13Lzrb65zfJ5EbfZBURvyVA9SQrCyzqtQRrM2', 
+    'QmUMXUnZ8AQcHATd5SVKg1F8iPoVh73YdDSs71H6SakJBy', 
+    'QmXJ7JcL4V1a5je65yBBbsZr9hzt7VRQ61eJ9sPQZmQNkd', 
+    'QmauUFXYdKWWEtjVSjArfg1maHsf82zn17zK2fJMEKjyyJ', 
+    'QmfP2y3wAfJv3fwWNSK4LPbpNhBNVfnoVrr2zGKXQhDDY4', 
+    'QmVe5ameLQNVzQEngJ46Bd2awZTLM3sJbA1jKLeFRNWcKb', 
+    'Qmak6xi3vcWZpepESC7KwanwdebfMG6GNW1bxCWXfpuXXt', 
+    'QmUPYRLWQZ1m4AtcP848uLkjJ9fytPDN8kKVereEeDidsJ', 
+    'QmRWuXkYVN8W6MBB9SdJH7r8vz469EVwYABFKv5Vm3ohEj', 
+    'QmSUJ93VsDpQh5NnoSPdVSsH5TWraszPbM2HT8Zmo4bm3z', 
+    'QmXcWfVNXLbBqVC9uM3kcvas9YZmJdn3yY1rQR9TBurKUa', 
+    'QmbcbfMgiMnvK635GSt9uu532MUbjNHr5jFZU443h5Zfxo', 
+    'QmQEdTRJcBYokce62UE1VT5GNmauUzgtFutvc9KtCHUZgC', 
+    'QmX8y1En82reVmC3orYZPjwWGMSqMz93WKTJE8XsWZcxBi', 
+    'QmScaMtZttmpUKKkAScF5KzZ4hKg4RWejQsafNTbPtkGqM', 
+    'QmSNPMJjWgF9qJUT88RWDAPmFZ7vySfrQFqC5mKg3EY8vQ', 
+    'QmT6uxtSCjapBcgc6gq2QFkHkSFvuZiQYe7Uzj53GQfMuC', 
+    'QmaNY2b3PH5fZu8PKyARWUzZ7bik91cJx4KmN6zEiFbnsV', 
+    'QmZ9ubu8YUXvMEZ21pyAohdAiaDgboWU6gjP1MZFK8BTRW', 
+    'QmQahVy28pQpqE8VcVc1svUK7Rpakr99REtNBes3jEDpQB', 
+    'QmP4GynP38cPQ6N4mTdWbM6eymw8JpG6TSFdp6CRW1AAJH', 
+    'QmV4sjBn8dF7gsCKKwdnUyNEvy7mVbJ3Dt4pS2h4hC2Prg', 
+    'QmThAmkErAxteJaRqYtYfUbGCWEnnxEQ7Buyg6qFU9j8Ed', 
+    'QmYcg9FbgxNnJGQmWQGyKnt95z37vqUqV3zPn41jiAYtQY', 
+    'QmWTLtNoYsigJxdaLGEw3grr92Udy2T4eLCxMPbqT4W7EL', 
+    'QmUkWVdSw2q87NoEGFvsSLe5PUSqoTRqpZJDETPptL14R2', 
+    'QmWnbg8Uu9AE8dxJv6Va9nqtEdz6oU4SvbEVj1qMDxXCR7', 
+    'QmUhQcjMcpP16Ki4vc6KFMAiDSmWBxHoq54LRoS6CGXTgy', 
+    'QmTLK3eAbv69SJLQCBkxjBgZFCo5PSxZWhh246npJVSjAQ', 
+    'QmbTTW1eWPTMbyFBnw2Wp14m1DMA1DcrGG4aLmTjUx3nKS', 
+    'QmYYbhuNMpEYnUdgoPMRTHT8RsRH273kK1C8WiKiAp3TgK', 
+    'QmQUT3cyuQyGLeBru8hP5F5xmQatKjdH1tJEhsDGydNHQC', 
+    'QmPoC8zHFxjonBqpWWb16VvXf4mAJGbnuDY4sTP87gryW1', 
+    'QmWCdpcnmxaNwp2R5aXZZAxAGqVnYXN7RpxHDPe6gbQR9R', 
+    'QmSxqSuurjTceEy8hGkJiVnRJcKLuJ7f22NFnhM6SoED3o', 
+    'QmWJCpaq16UjvHEqhrkQqqmZX3ccCXcbH7sDRYDfesgsg3', 
+    'QmQqu3Vm6C2kALJhryLJTMvZGvuh33b5B2is4RLrKkCtdj', 
+    'Qmdyg3g5zcuTdj4QtTyC5LCvq6HKXS3fBsEbCKma3YZtJE', 
+    'QmT3MJvC7VLXuYv4u4qGWQ6aKMaoqXr28mTcNMQuhyMq7M', 
+    'Qmcg8AR93JjUVC9YjtW146vXhKwmsLJ1FTDqJDUnwb3JWt', 
+    'QmQJCEimecLrE2jgviMHda1u7om8UPCimy6RrjQnMh5y8o', 
+    'QmTC61PdSXon9jZBXQmdpfTq4L6PUMkSEyKM2BYBqciEDY', 
+    'QmUGsAyCBSFhkRzf2pCUjpCAbdhjA7Lw5RTcN4yswTHHtj', 
+    'QmRStLKgRpHZu9FirDp8iAgvPSEoAhUMeEseTdiqNbRdub', 
+    'QmYW6aLRpRoFqL6CR7j3FKixQzHL5hsqj24KCLEgjce2hV', 
+    'QmWR8LN7UeE6VmTsQ4c4pZWheoEosePuRjAxSURUg1dHHp', 
+    'QmNfQ9TatE2G59tW2muMXA3bueH4JXR5pNaTwwHxpXuVpS', 
+    'QmPn7G4VEK8anjnmKdnbiH4oyRGptyfBtG1G59s31GiWqA', 
+    'QmSFqoj2NujNdMSdmxBzAScHbXRn48ZpMAHvLhrXsSmm6m', 
+    'QmZxX7SEMVgiBKTyZhFwSoBbrPKjb2q8LeKkcC4Z1TWueY', 
+    'QmdRbJZ3zvv4mYFrFytrx4TRyqVquJKtF2V4oEnTBFnHQh', 
+    'QmZRdDNKy3b9WcWZDZpxE77Kz9ytM9gMU9G6J3q8AjBPcX', 
+    'QmPoc2UqoZrhR6T5gPL4GhRbY8ra2TnxMsRbyNY5SKy8or', 
+    'Qma3YgetozWKU8rPjDnBRmG7cKTr3AEuY6fZtEu82dmQ3v', 
+    'QmeK9pDP3pbMQVTYt7WAVQ4LpgoqJ3p1GdgQ5BaUGUVsKq'];
 
-		.nft-card-id {
-			height: 10%;
-		}
-	
-		.nft-card-owner {
-			height: 10%;
-			overflow-x: scroll;
-		}
-	
-		.nft-card-img-holder {
-			height: 80%;
-		}
-	
-		.nft-card img {
-			width: 100%;
-		}
-	
-		.HVCenter {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+      $('.dope1').css({'background-image': 'url(/img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      $('.dope2').css({'background-image': 'url(/img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      $('.dope3').css({'background-image': 'url(/img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      $('.dope4').css({'background-image': 'url(/img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      });
+    </script>
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+      <a href="#"><img src="favicon.ico" style="width:50px; height: 50px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#buy">Buy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About DCF</a>
+          </li>            
+          <li class="nav-item">
+            <a class="nav-link" href="#next">What's Next?</a>
+          </li>                             
+          <li class="nav-item">
+            <a class="nav-link disabled">Members</a>
+          </li>
+        </ul>
+        <ul class="nav smedia">
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="https://twitter.com/DopeCrewFriends"><i class="fab fa-twitter"></i></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="https://t.me/DopeCrewFriends"><i class="fab fa-telegram"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="https://discord.gg/WgWrPqNXhz"><i class="fab fa-discord"></i></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-		#header {
-			background-color: rgba(10,10,10,0.1);
-		}
+<main>
+    <div class="bg-cover">
+    </div>
+    <div class="container marketing mt-3">
+        <div class="row featurette">
+            <div class="col-md-7 middle">
+                <h1 class="">Welcome to </br> Dope Crew Friends NFT.</h1>
+                <p class="lead justo">DCF is a collection of 999 NFTs, hand-drawn by artist Daehan Dope. He, who decided to enter the Zilliqa Metaverse where DCF lives, was welcomed by the Zilliqa family and its members. It is the same community that is collaborating to expand the DFC world. Many projects within DCF are in progress and will be unlocked for the members soon.</p>
+                <h4 class=""><span class="text-danger">Distribution</span></h4>
+                <p class="lead justo">The first collection of 99 monkeys sold out after a few minutes in the market. The bottom price was $Zil 999 (~ USD 100). About 10% of the collection was sold at a premium price between $Zil 1500 and $Zil 5000. The price might vary for future generations, here another decision in the hands of the community. Stay tuned to our social media channels for more information. </br>
+                    <span class="fw-ligther fs-6 fst-italic">Note: Some pieces can be held for giveaways or private sell.</span></p>
 
-		button {
-			margin: 5px;
-		}
-
-		#mintbox-container {
-			display: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0px;
-			left: 0px;
-			background-color: rgba(10,10,10,0.6);
-		}
-
-		#mintbox {
-			border:solid 1px;
-			color: wheat;
-			padding: 1%;
-		}
-
-		#cndbox-container {
-			display: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0px;
-			left: 0px;
-			background-color: rgba(10,10,10,0.6);
-		}
-
-		#cndbox {
-			border:solid 1px;
-			color: wheat;
-			padding: 1%;
-		}
-
-		#clbox-container {
-			display: none;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0px;
-			left: 0px;
-			background-color: rgba(10,10,10,0.6);
-		}
-
-		#clbox {
-			border:solid 1px;
-			background-color: black;
-			color: wheat;
-			padding: 1%;
-		}
-
-	</style>
-	<script type="text/javascript" src="./script.js"></script>
-</head>
-<body onload="onloadInit()">
-	<!-- Header -->
-	<div id="header">
-		<span class="header-item" style="font-size: 200%;">
-			Zilliqa NFT Wallet
-		</span>
-		<span id="wallet-address-container" style="display:none;float: right;">
-			<b>
-			<span id="wallet-network-span"></span>
-			&nbsp;-&nbsp;
-			<span id="wallet-address-span"></span>
-			</b>
-		</span>
-		<span id="connect-button-container" style="float: right;">
-			<button onclick="connectAppToWallet()">Connect Wallet</button>
-		</span>
-	</div>
-	<!-- Header -->
-
-	<!-- Toolbar -->
-	<div class="HVCenter" id="toolbar">
-		<button onclick="loadGallery(false)">All</button>
-		<button onclick="loadGallery(true)">MyNFTs</button>
-		<button onclick="showMintbox()">Mint</button>
-		<button onclick="loadNFTContract()">Load New NFT</button>
-		<button onclick="showCndbox()">Create New NFT</button>
-		<button onclick="showCLbox()">Contract List</button>
-		
-	</div>
-	<!-- Toolbar -->	
-
-	<!-- Gallery -->
-	<center>
-		<div id="gallery-container">
-			Nothing to show.
-		</div>
-	</center>
-	<!-- Gallery -->
-
-	<!-- Mint Box -->
-	<div class="HVCenter" id="mintbox-container">
-		<div id="mintbox">
-			<table style="border:solid 1px;">
-				<tr>
-					<td><label>Mint NFT For</label></td>
-					<td><input type="text" id="mintnft_to" placeholder="0x1234...def"></td>
-				</tr>
-				<tr>
-					<td><label>NFT location</label></td>
-					<td><input type="text" id="mintnft_uri" placeholder="https://www..."></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<center>
-							<button id="MintNFTBtn" onclick="mintNFT()">Mint</button>
-							<button id="MintboxCloseBtn" onclick="hideMintbox()">Close</button>
-						</center>
-					</td>
-				</tr>								
-			</table>
-		</div>
-	</div>
-	<!-- Mint Box -->
-
-	<!-- Create And Deploy New NFT Box -->
-	<div class="HVCenter" id="cndbox-container">
-		<div id="cndbox">
-			<table style="border:solid 1px;">
-				<tr>
-					<td><label>NFT Name</label></td>
-					<td><input type="text" id="cndnft_name" placeholder="DragonZil"></td>
-				</tr>
-				<tr>
-					<td><label>NFT Symbol</label></td>
-					<td><input type="text" id="cndnft_symbol" placeholder="DZT"></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<center>
-							<button id="cndNFTBtn" onclick="DeployNFT()">Deploy</button>
-							<button id="cndboxCloseBtn" onclick="hideCndbox()">Close</button>
-						</center>
-					</td>
-				</tr>								
-			</table>
-		</div>
-	</div>
-	<!-- Create And Deploy New NFT Box -->
-
-	<!-- NFT contract list -->
-	<div class="HVCenter" id="clbox-container" style="display: none;">
-		<div id="clbox">
-			<table>
-				<tr><th>Testnet</th></tr>
-				<tr><td>StarNFTz - zil1qv05tuja7st68529m0zaq83qz5av2p00mwjmkx</td></tr>
-				<tr><td>MarvelCollectable - zil15qu3rqqsu6tpszp69c7eqzrps2pyccufds40uh</td></tr>
-				<tr><td><hr></td></tr>
-				<tr><th>Mainnet</th></tr>
-				<tr><td>DragonZil - zil1knvrhm9e2rqfdvqp50gu02a3pat34e6lst9d36</td></tr>
-			</table>
-			<button onclick="hideCLbox()">Close</button>
-		</div>
-	</div>
-	<!-- NFT contract list -->
-
+                  </div>
+            <div class="col-md-5 middle">
+              <div class="d-flex justify-content-center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="dope1 img-fluid">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="dope2 img-fluid">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="dope3 img-fluid">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="dope4 img-fluid">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> 
+            </div>
+        </div>
+        <div id="buy"></div>
+        <div class=" mb-4 bg-warning rounded-3 mt-5">
+            <div class="container-fluid py-4 text-center">
+                <h1 class="display-5 fw-bold text-center">Buy a Dope Crew Friend NFT</h1>
+                <p class="fs-4 text-center">DCF was originaly launched on SpardaWallet, and it is also available on Arky. </br><span class="fw-ligther fs-6 fst-italic"> Note: You need <a class="text-secondary" href="https://zilpay.io/">Zilpay Wallet</a> to buy/sell on Zilliqa Blockchain.</span></p>
+                <a class="btn btn-dark btn-lg btn" role="button" href="https://www.spardawallet.com/marketsearch.html?9a7847a78c6f2677ef49a30c9013027e3a1b8527">Go to Sparda</a>
+                <a class="btn btn-secondary btn-lg btn" role="button" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt">Go to Arky</a>
+            </div>
+        </div>  
+        <div id="about"></div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2 middle">
+                <h1>The Singularity<span class="text-muted"></span></h1>
+                <p class="lead justo">Every single DCF is a hand-drawn piece, and even though they share some traits including, facial expressions, accessories, clothes, etc., most of them have unique characteristics.</p>
+                <p class="lead justo">Dope Crew Friends Metaverse lives on the Zilliqa Blockchain and every piece of digital art is hosted on a IPFS.</p>
+                <p class="lead justo">Beginning or The Monkey Collection was the first of 9. Every new generation will be featuring a new animal voted by the community. </p>
+                <p class="lead justo">More about the smart contract address of DCF Token <a class="text-muted" href="https://viewblock.io/zilliqa/address/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt">here</a>.</p>
+                <p class="lead justo">Daehan previously released <a class="text-muted" href="https://viewblock.io/zilliqa/address/zil1jfe3zefln5fqk9qqprw7w5ljev7ytmxwkzcars">Dope Crew</a>, a collection of 17 rare monkeys, and it was the inspiration for this new project.</p>
+            </div>
+            <div class="col-md-5 order-md-1 middle">
+                <video autoplay loop muted width="100%" max-height="100%">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="team"></div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7 middle">
+                <h1>Team. <span class="text-muted fs-2">Wondering who we are?.</span></h1>
+                <p class="lead justo">We are just a few people like you who decided to join and support the artist Daehan Dope. Daehan also sponsors the Dope Crew Foundation, which helps other artists to publish their art in the digital world. Join him on Twitter and Instagram, or visit Dae XX collection on SpardaWallet.</p>
+                <div class=" mb-4 bg-warning rounded-3 mt-5">
+                    <div class="container-fluid py-4 text-center">
+                    <h3 class="display-6 fw-bold text-center">Join Daehan Dope</h3>
+                    <a class="btn btn-dark btn-info" role="button" href="https://twitter.com/daehandope"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-info" role="button" href="https://www.instagram.com/daehandope"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-info" role="button" href="https://www.spardawallet.com/marketsearch.html?7b763f43301b14c37460c5814d7e0f35976936ce"><img src="sparda.svg" width="20px" height="20px" class="sparda"/></a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-5 middle">
+                <img src="community.webp" class="img-fluid">
+            </div>
+        </div>
+        <div id="next"></div>
+        <hr class="featurette-divider">
+        <div class="row featurette ">
+            <div class="col-md-7 order-md-2 middle">
+                <h1>What's next?.<span class="text-muted"></span></h1>
+                <p class="lead" style="text-align: justify;">January 2022 is the date for the next generation. According to the Chinese zodiac, 2022 is the year of the tiger. It might be a pure coincidence that the community decided to choose the tiger as the next animal in the DopeVerse, but the sure thing is, it looks fantastic. </p>
+                <p class="lead" style="text-align: justify;">Do you want to know more? Well, we can tell you this, some animals in every generation will share the coolest characteristic the monkeys have. Between 10-20 monkeys will be selected by the community to carry the legacy of future generations. Are you ready to see a Spartan Tiger? Because we are!.</p>
+                <p class="lead" style="text-align: justify;">The member's section of the website is currently under construction. Some of the things you as a member would do are: transfer and sell your NFTs, buy merchandise, access exclusive content, play-to-earn gaming, and many more.</p>                
+            </div>
+            <div class="col-md-5 order-md-1 middle">
+                <img src="metaverse.webp" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark mt-5">
+        <footer>
+            <div class="container card-footer">
+                <ul class="nav smedia">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://twitter.com/DopeCrewFriends"><i class="fab fa-twitter"></i></a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://t.me/DopeCrewFriends"><i class="fab fa-telegram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="https://discord.gg/WgWrPqNXhz"><i class="fab fa-discord"></i></a>
+                    </li>
+                </ul>
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p class="copyright">DopeCrewFriends.com © 2021 - Powered by <img style="width:20px;" src="https://meta.viewblock.io/ZIL/logo?t=dark" alt="ZIL Token Logo" loading="lazy"> Zilliqa</p>
+            </div>
+        </footer>
+    </div>
+</main>   
 </body>
 </html>
