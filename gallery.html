@@ -7,11 +7,10 @@
     <meta name="author" content="Nestor Caro; email@nestorcaro.com">
     <title>DCF NFT Gallery</title>
 
-    <link href="https://dopecrewfriends.com/carousel.css" rel="stylesheet">
-    <link href="https://dopecrewfriends.com/bootstrap.min.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="https://dopecrewfriends.com/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="./dope.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
 
     <style>
       .bg-cover {
@@ -41,10 +40,6 @@
           display:flex;
           font-size: x-large;
       }
-      .wallet{
-          justify-content: center;
-          display:flex;
-      }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -61,22 +56,12 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      .wallet{
-          justify-content: right;
-          display:flex;
-  
-          } 
-      .wallet-btn{
-          padding: 0.5rem 1rem;
-          font-size: 1.25rem;
-          border-radius: 0.3rem;
-      }
       }
     </style>
 
   </head>
 
-<body onload="onloadGallery()">
+<body>
     
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
@@ -94,7 +79,7 @@
             <a class="nav-link" href="index.html#buy">Buy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link disabled" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html#team">Team</a>
@@ -106,7 +91,7 @@
             <a class="nav-link" href="index.html#next">What's Next?</a>
           </li>                             
           <li class="nav-item">
-            <a class="nav-link disabled">Members</a>
+            <a class="nav-link" href="member.html">Members</a>
           </li>
         </ul>
         <ul class="nav smedia">
@@ -119,40 +104,2019 @@
             <li class="nav-item">
                 <a class="nav-link text-secondary" href="https://discord.gg/WgWrPqNXhz"><i class="fab fa-discord"></i></a>
             </li>
-        </ul>             
+        </ul>
       </div>
-
     </div>
-
   </nav>
-
 </header>
 
 <main>
-  <div class="wallet mt-4">
-    <span id="wallet-address-container" style="display:none;">
-      <b>
-         <span id="wallet-address-span" class="btn btn-outline-secondary wallet-btn"></span>
-      </b>
-      </span>
-    <span id="connect-button-container">
-      <button type="button" class="btn btn-outline-secondary wallet-btn" onclick="connectAppToWallet()">Connect Wallet</button>
-      </span>  
-  </div>  
-    <div class="mt-3 mb-3">
-      <h1 class="text-center">My DCF Gallery</h1>
+    <div class="mt-5 mb-3">
+      <h1 class="text-center">DCF Gallery</h1>
     </div>
     <div class="container">
-      <div id="gallery-container" class="row">
-        <div class=" mb-4 bg-warning rounded-3 mt-5">
-            <div class="container-fluid py-4 text-center">
-                <h1 class="display-5 fw-bold text-center">Connect your Wallet to access</h1>
-                <p class="fs-4 text-center">Not a holder yet? get one now on SpardaWallet and/or Arky. </br><span class="fw-ligther fs-6 fst-italic"> Note: You need <a class="text-secondary" href="https://zilpay.io/">Zilpay Wallet</a> to buy/sell on Zilliqa Blockchain.</span></p>
-                <a class="btn btn-dark btn-lg btn" role="button" href="https://www.spardawallet.com/marketsearch.html?9a7847a78c6f2677ef49a30c9013027e3a1b8527">Go to Sparda</a>
-                <a class="btn btn-secondary btn-lg btn" role="button" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt">Go to Arky</a>
+      <div class="row">
+      <!-- ***** Gallery Area Start ***** -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQK7a27fVebrNHghYWUVVKfQKf1zMCYeFWQBx5FAEYoAf" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 1</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQK7a27fVebrNHghYWUVVKfQKf1zMCYeFWQBx5FAEYoAf" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/1" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-      <!-- ***** Gallery Area Start ***** -->            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmX51HTdMKDjpwGUN7a3ALGw1quqaWjh915CCXZhRdCYVH" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 2</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmX51HTdMKDjpwGUN7a3ALGw1quqaWjh915CCXZhRdCYVH" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/2" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmTjyEmn2LdA6zteQyaQZe77eVd8go9N1rrzr7SdYjKvSf" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 3</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmTjyEmn2LdA6zteQyaQZe77eVd8go9N1rrzr7SdYjKvSf" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/3" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmZcZjEhrYRuLWpFucgFVA7Efy6L5Zekhu9PS9JpjVaxVY" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 4</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmZcZjEhrYRuLWpFucgFVA7Efy6L5Zekhu9PS9JpjVaxVY" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/4" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmXqFHv7WJVNZvCNwMnncKV2UZTNZSbuaeTmzcHPDDQta9" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 5</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmXqFHv7WJVNZvCNwMnncKV2UZTNZSbuaeTmzcHPDDQta9" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/5" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmd1cMzsFpyvje716T5vXVKBEXK9He8sXBYmT5myLyDzzK" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 6</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmd1cMzsFpyvje716T5vXVKBEXK9He8sXBYmT5myLyDzzK" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/6" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUD8DfG8LdLpW8BoHPo2WfDyhcpZxD5rSKyh3Zpbrh5ue" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 7</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUD8DfG8LdLpW8BoHPo2WfDyhcpZxD5rSKyh3Zpbrh5ue" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/7" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbZqybXzUtxiuGaxGQzsuQ5TGTsb4fZqpwHo93fYqwjzb" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 9</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbZqybXzUtxiuGaxGQzsuQ5TGTsb4fZqpwHo93fYqwjzb" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/9" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmV1GtK3kXCJsWgqGrVUWk3LgL8vSveY2fFvgJwYKxioJ5" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 10</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmV1GtK3kXCJsWgqGrVUWk3LgL8vSveY2fFvgJwYKxioJ5" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/10" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmeRiZbpvZe3YSFG3UfZPcbm4bvPjY96YizudaP8Mu94MD" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 11</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmeRiZbpvZe3YSFG3UfZPcbm4bvPjY96YizudaP8Mu94MD" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/11" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmTGoUygb1Ai93TKXXFtwUrUAeNLUg2hYaAEMkJHdoe9uL" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 12</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmTGoUygb1Ai93TKXXFtwUrUAeNLUg2hYaAEMkJHdoe9uL" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/12" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmYKjBceYSnp3epCcpKdhL2wwLzUhzaJeaVj7GvjpnoMSH" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 13</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmYKjBceYSnp3epCcpKdhL2wwLzUhzaJeaVj7GvjpnoMSH" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/13" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmVnAtoBxAbu9uxPdRAwXDQkrE4Ly788bk8wwMJeTth7qT" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 14</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmVnAtoBxAbu9uxPdRAwXDQkrE4Ly788bk8wwMJeTth7qT" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/14" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmTzHuRxSy3QNAfLFTo7qYryafMADzHav7MLG9uoLZzdtf" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 15</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmTzHuRxSy3QNAfLFTo7qYryafMADzHav7MLG9uoLZzdtf" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/15" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmThmBBfuAEaKTGmDyxCFquW4FGDQ6FokJybpF8dYtXSJE" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 16</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmThmBBfuAEaKTGmDyxCFquW4FGDQ6FokJybpF8dYtXSJE" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/16" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUK149mHKzp353mmdxAvci1oFPwWa5x2VSnNiGAGb2J3L" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 17</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUK149mHKzp353mmdxAvci1oFPwWa5x2VSnNiGAGb2J3L" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/17" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmWt1T3qqjoStnUHXnEfFwd814PLwBoyy2VeQ6kUgMeLmc" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 18</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmWt1T3qqjoStnUHXnEfFwd814PLwBoyy2VeQ6kUgMeLmc" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/18" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmSxw1QfB5dZqojD5yh5JLujthVA2E4eff9KCHL6S6TDxp" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 19</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmSxw1QfB5dZqojD5yh5JLujthVA2E4eff9KCHL6S6TDxp" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/19" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmZwvhhoiDbSPM8G4wosUx2jcZZkUkh6nPFnPDSbmGxA1b" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 20</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmZwvhhoiDbSPM8G4wosUx2jcZZkUkh6nPFnPDSbmGxA1b" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/20" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmYwHjSjLFMvUmMHjjN4bGQp43Kfyn7SJS9Raa9fAfFaKP" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 21</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmYwHjSjLFMvUmMHjjN4bGQp43Kfyn7SJS9Raa9fAfFaKP" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/21" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmPrHwFm3Cn5SRx1QqruqHCusm7FCfKt89zNg9p6kq1ohy" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 22</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmPrHwFm3Cn5SRx1QqruqHCusm7FCfKt89zNg9p6kq1ohy" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/22" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmcxwBG7CvA9CjFgvrtJHdTksw2ZFu7w4CbxNJYs3VaEuC" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 23</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmcxwBG7CvA9CjFgvrtJHdTksw2ZFu7w4CbxNJYs3VaEuC" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/23" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmb1tnNEr69p8uwuLz2rgNgqajTfCeqDKRFF4bocfvmijm" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 24</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmb1tnNEr69p8uwuLz2rgNgqajTfCeqDKRFF4bocfvmijm" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/24" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQUZiuiqpe7zWnCt9NKeaiLve2E9F5NXnfZ56pmBrzEhh" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 25</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQUZiuiqpe7zWnCt9NKeaiLve2E9F5NXnfZ56pmBrzEhh" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/25" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmVSQDryLx4PS2F35aBUhk2ZsRpKJXJt5YsCrnFAGeBPFt" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 26</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmVSQDryLx4PS2F35aBUhk2ZsRpKJXJt5YsCrnFAGeBPFt" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/26" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmV2AniBm9rFnPkrXNCAa91W5L55R1Yi7ymrxHyvTGpRxV" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 27</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmV2AniBm9rFnPkrXNCAa91W5L55R1Yi7ymrxHyvTGpRxV" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/27" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUoftMuMvPAYaGMq6jMkxWjbWeWb87UFD5onLjF6jQqKN" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 28</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUoftMuMvPAYaGMq6jMkxWjbWeWb87UFD5onLjF6jQqKN" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/28" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbNvZ5jndy9ieXPJNetQgwMqUf1ENgpHQC8BjyuBoVtaF" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 29</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbNvZ5jndy9ieXPJNetQgwMqUf1ENgpHQC8BjyuBoVtaF" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/29" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmcaHyz7LSCrFRXNrRcPt5gdVk2uFcApix5ZKukztVUPny" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 30</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmcaHyz7LSCrFRXNrRcPt5gdVk2uFcApix5ZKukztVUPny" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/30" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmdyFM4V2B43AGwLwW3ZVqruLuM7x4A57Tsa1fsqYZShHM" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 31</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmdyFM4V2B43AGwLwW3ZVqruLuM7x4A57Tsa1fsqYZShHM" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/31" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQNaV6oFV49X3nryoqZ76cJsyi68foxnawNuxebpYMexJ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 32</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQNaV6oFV49X3nryoqZ76cJsyi68foxnawNuxebpYMexJ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/32" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbgRisyWiMwyXwEvrUqFvwGfhdDvmz7ATdsrq3xusQnmt" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 33</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbgRisyWiMwyXwEvrUqFvwGfhdDvmz7ATdsrq3xusQnmt" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/33" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmR6w1UTVMpqRDPmBjUmgmWwVXp82Q3sCKENtzeSiSi97y" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 34</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmR6w1UTVMpqRDPmBjUmgmWwVXp82Q3sCKENtzeSiSi97y" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/34" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmb76mjpuhj8PaTuCq2q9MvTGdzzQQ9bUtpz62KtM6bzfp" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 35</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmb76mjpuhj8PaTuCq2q9MvTGdzzQQ9bUtpz62KtM6bzfp" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/35" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmc11oNUSJpEE13RaPKEYsBQHWkt4CteddDGPLfqStZbD2" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 36</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmc11oNUSJpEE13RaPKEYsBQHWkt4CteddDGPLfqStZbD2" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/36" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmYDhPZrZsPXR2HryhdzrUNBsuXdKHWfobNDmK72qraoHe" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 37</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmYDhPZrZsPXR2HryhdzrUNBsuXdKHWfobNDmK72qraoHe" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/37" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUF1TJdAW16Fefqm54LEsBRApGcXDeDSmjmpqmNX3zYCS" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 38</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUF1TJdAW16Fefqm54LEsBRApGcXDeDSmjmpqmNX3zYCS" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/38" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUfDnAfv8RP8VPkfnB3JAGpZYydvN6UuPGV627udR152W" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 39</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUfDnAfv8RP8VPkfnB3JAGpZYydvN6UuPGV627udR152W" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/39" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmeAkck7ugQd2QKCsevzyB4yxUUFBAdH8dsffY9UhtrX2h" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 40</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmeAkck7ugQd2QKCsevzyB4yxUUFBAdH8dsffY9UhtrX2h" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/40" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmeqVzqQENSYybvDBYFds9oQY2znEFJxBJkmtwXKapUb1F" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 41</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmeqVzqQENSYybvDBYFds9oQY2znEFJxBJkmtwXKapUb1F" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/41" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmdSd9NMrhsLyh1xrjeHuYUefUzQe3YWHML4u2Z8Q7XTtL" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 42</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmdSd9NMrhsLyh1xrjeHuYUefUzQe3YWHML4u2Z8Q7XTtL" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/42" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmY4qsLXKyH1mtzi5H76R3Mr2S1Z8sjocZRtuKmCNcJUsQ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 43</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmY4qsLXKyH1mtzi5H76R3Mr2S1Z8sjocZRtuKmCNcJUsQ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/43" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmTRevVSh6wdzsayZJP55SwFpMttgLzHBLEbHMEhMn8bKQ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 44</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmTRevVSh6wdzsayZJP55SwFpMttgLzHBLEbHMEhMn8bKQ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/44" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbfMmFmKFNpZ49TJqkreZRomj6uECNHQtMuFPUJf6jvWG" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 45</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbfMmFmKFNpZ49TJqkreZRomj6uECNHQtMuFPUJf6jvWG" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/45" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbFabAdfuhAtHXT53UCBWBtYojsywM8CjiAZd2TvfNM8Q" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 46</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbFabAdfuhAtHXT53UCBWBtYojsywM8CjiAZd2TvfNM8Q" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/46" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qme8GiRvH13Lzrb65zfJ5EbfZBURvyVA9SQrCyzqtQRrM2" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 47</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qme8GiRvH13Lzrb65zfJ5EbfZBURvyVA9SQrCyzqtQRrM2" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/47" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUMXUnZ8AQcHATd5SVKg1F8iPoVh73YdDSs71H6SakJBy" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 48</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUMXUnZ8AQcHATd5SVKg1F8iPoVh73YdDSs71H6SakJBy" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/48" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmXJ7JcL4V1a5je65yBBbsZr9hzt7VRQ61eJ9sPQZmQNkd" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 49</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmXJ7JcL4V1a5je65yBBbsZr9hzt7VRQ61eJ9sPQZmQNkd" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/49" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmauUFXYdKWWEtjVSjArfg1maHsf82zn17zK2fJMEKjyyJ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 50</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmauUFXYdKWWEtjVSjArfg1maHsf82zn17zK2fJMEKjyyJ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/50" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmfP2y3wAfJv3fwWNSK4LPbpNhBNVfnoVrr2zGKXQhDDY4" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 51</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmfP2y3wAfJv3fwWNSK4LPbpNhBNVfnoVrr2zGKXQhDDY4" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/51" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmVe5ameLQNVzQEngJ46Bd2awZTLM3sJbA1jKLeFRNWcKb" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 52</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmVe5ameLQNVzQEngJ46Bd2awZTLM3sJbA1jKLeFRNWcKb" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/52" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmak6xi3vcWZpepESC7KwanwdebfMG6GNW1bxCWXfpuXXt" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 53</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmak6xi3vcWZpepESC7KwanwdebfMG6GNW1bxCWXfpuXXt" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/53" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUPYRLWQZ1m4AtcP848uLkjJ9fytPDN8kKVereEeDidsJ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 54</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUPYRLWQZ1m4AtcP848uLkjJ9fytPDN8kKVereEeDidsJ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/54" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmRWuXkYVN8W6MBB9SdJH7r8vz469EVwYABFKv5Vm3ohEj" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 55</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmRWuXkYVN8W6MBB9SdJH7r8vz469EVwYABFKv5Vm3ohEj" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/55" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmSUJ93VsDpQh5NnoSPdVSsH5TWraszPbM2HT8Zmo4bm3z" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 56</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmSUJ93VsDpQh5NnoSPdVSsH5TWraszPbM2HT8Zmo4bm3z" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/56" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmXcWfVNXLbBqVC9uM3kcvas9YZmJdn3yY1rQR9TBurKUa" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 57</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmXcWfVNXLbBqVC9uM3kcvas9YZmJdn3yY1rQR9TBurKUa" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/57" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbcbfMgiMnvK635GSt9uu532MUbjNHr5jFZU443h5Zfxo" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 58</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbcbfMgiMnvK635GSt9uu532MUbjNHr5jFZU443h5Zfxo" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/58" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQEdTRJcBYokce62UE1VT5GNmauUzgtFutvc9KtCHUZgC" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 59</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQEdTRJcBYokce62UE1VT5GNmauUzgtFutvc9KtCHUZgC" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/59" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmX8y1En82reVmC3orYZPjwWGMSqMz93WKTJE8XsWZcxBi" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 60</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmX8y1En82reVmC3orYZPjwWGMSqMz93WKTJE8XsWZcxBi" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/60" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmScaMtZttmpUKKkAScF5KzZ4hKg4RWejQsafNTbPtkGqM" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 61</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmScaMtZttmpUKKkAScF5KzZ4hKg4RWejQsafNTbPtkGqM" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/61" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmSNPMJjWgF9qJUT88RWDAPmFZ7vySfrQFqC5mKg3EY8vQ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 62</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmSNPMJjWgF9qJUT88RWDAPmFZ7vySfrQFqC5mKg3EY8vQ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/62" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmT6uxtSCjapBcgc6gq2QFkHkSFvuZiQYe7Uzj53GQfMuC" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 63</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmT6uxtSCjapBcgc6gq2QFkHkSFvuZiQYe7Uzj53GQfMuC" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/63" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmaNY2b3PH5fZu8PKyARWUzZ7bik91cJx4KmN6zEiFbnsV" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 64</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmaNY2b3PH5fZu8PKyARWUzZ7bik91cJx4KmN6zEiFbnsV" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/64" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmZ9ubu8YUXvMEZ21pyAohdAiaDgboWU6gjP1MZFK8BTRW" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 65</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmZ9ubu8YUXvMEZ21pyAohdAiaDgboWU6gjP1MZFK8BTRW" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/65" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQahVy28pQpqE8VcVc1svUK7Rpakr99REtNBes3jEDpQB" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 66</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQahVy28pQpqE8VcVc1svUK7Rpakr99REtNBes3jEDpQB" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/66" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmP4GynP38cPQ6N4mTdWbM6eymw8JpG6TSFdp6CRW1AAJH" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 67</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmP4GynP38cPQ6N4mTdWbM6eymw8JpG6TSFdp6CRW1AAJH" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/67" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmV4sjBn8dF7gsCKKwdnUyNEvy7mVbJ3Dt4pS2h4hC2Prg" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 68</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmV4sjBn8dF7gsCKKwdnUyNEvy7mVbJ3Dt4pS2h4hC2Prg" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/68" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmThAmkErAxteJaRqYtYfUbGCWEnnxEQ7Buyg6qFU9j8Ed" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 69</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmThAmkErAxteJaRqYtYfUbGCWEnnxEQ7Buyg6qFU9j8Ed" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/69" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmYcg9FbgxNnJGQmWQGyKnt95z37vqUqV3zPn41jiAYtQY" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 70</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmYcg9FbgxNnJGQmWQGyKnt95z37vqUqV3zPn41jiAYtQY" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/70" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmWTLtNoYsigJxdaLGEw3grr92Udy2T4eLCxMPbqT4W7EL" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 71</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmWTLtNoYsigJxdaLGEw3grr92Udy2T4eLCxMPbqT4W7EL" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/71" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUkWVdSw2q87NoEGFvsSLe5PUSqoTRqpZJDETPptL14R2" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 72</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUkWVdSw2q87NoEGFvsSLe5PUSqoTRqpZJDETPptL14R2" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/72" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmWnbg8Uu9AE8dxJv6Va9nqtEdz6oU4SvbEVj1qMDxXCR7" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 73</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmWnbg8Uu9AE8dxJv6Va9nqtEdz6oU4SvbEVj1qMDxXCR7" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/73" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUhQcjMcpP16Ki4vc6KFMAiDSmWBxHoq54LRoS6CGXTgy" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 74</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUhQcjMcpP16Ki4vc6KFMAiDSmWBxHoq54LRoS6CGXTgy" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/74" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmTLK3eAbv69SJLQCBkxjBgZFCo5PSxZWhh246npJVSjAQ" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 75</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmTLK3eAbv69SJLQCBkxjBgZFCo5PSxZWhh246npJVSjAQ" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/75" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmbTTW1eWPTMbyFBnw2Wp14m1DMA1DcrGG4aLmTjUx3nKS" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 76</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmbTTW1eWPTMbyFBnw2Wp14m1DMA1DcrGG4aLmTjUx3nKS" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/76" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmYYbhuNMpEYnUdgoPMRTHT8RsRH273kK1C8WiKiAp3TgK" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 77</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmYYbhuNMpEYnUdgoPMRTHT8RsRH273kK1C8WiKiAp3TgK" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/77" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQUT3cyuQyGLeBru8hP5F5xmQatKjdH1tJEhsDGydNHQC" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 78</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQUT3cyuQyGLeBru8hP5F5xmQatKjdH1tJEhsDGydNHQC" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/78" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmPoC8zHFxjonBqpWWb16VvXf4mAJGbnuDY4sTP87gryW1" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 79</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmPoC8zHFxjonBqpWWb16VvXf4mAJGbnuDY4sTP87gryW1" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/79" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmWCdpcnmxaNwp2R5aXZZAxAGqVnYXN7RpxHDPe6gbQR9R" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 80</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmWCdpcnmxaNwp2R5aXZZAxAGqVnYXN7RpxHDPe6gbQR9R" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/80" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmSxqSuurjTceEy8hGkJiVnRJcKLuJ7f22NFnhM6SoED3o" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 81</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmSxqSuurjTceEy8hGkJiVnRJcKLuJ7f22NFnhM6SoED3o" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/81" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmWJCpaq16UjvHEqhrkQqqmZX3ccCXcbH7sDRYDfesgsg3" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 82</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmWJCpaq16UjvHEqhrkQqqmZX3ccCXcbH7sDRYDfesgsg3" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/82" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQqu3Vm6C2kALJhryLJTMvZGvuh33b5B2is4RLrKkCtdj" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 83</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQqu3Vm6C2kALJhryLJTMvZGvuh33b5B2is4RLrKkCtdj" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/83" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmdyg3g5zcuTdj4QtTyC5LCvq6HKXS3fBsEbCKma3YZtJE" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 84</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmdyg3g5zcuTdj4QtTyC5LCvq6HKXS3fBsEbCKma3YZtJE" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/84" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmT3MJvC7VLXuYv4u4qGWQ6aKMaoqXr28mTcNMQuhyMq7M" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 85</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmT3MJvC7VLXuYv4u4qGWQ6aKMaoqXr28mTcNMQuhyMq7M" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/85" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qmcg8AR93JjUVC9YjtW146vXhKwmsLJ1FTDqJDUnwb3JWt" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 86</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qmcg8AR93JjUVC9YjtW146vXhKwmsLJ1FTDqJDUnwb3JWt" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/86" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmQJCEimecLrE2jgviMHda1u7om8UPCimy6RrjQnMh5y8o" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 87</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmQJCEimecLrE2jgviMHda1u7om8UPCimy6RrjQnMh5y8o" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/87" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmTC61PdSXon9jZBXQmdpfTq4L6PUMkSEyKM2BYBqciEDY" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 88</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmTC61PdSXon9jZBXQmdpfTq4L6PUMkSEyKM2BYBqciEDY" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/88" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmUGsAyCBSFhkRzf2pCUjpCAbdhjA7Lw5RTcN4yswTHHtj" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 89</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmUGsAyCBSFhkRzf2pCUjpCAbdhjA7Lw5RTcN4yswTHHtj" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/89" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmRStLKgRpHZu9FirDp8iAgvPSEoAhUMeEseTdiqNbRdub" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 90</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmRStLKgRpHZu9FirDp8iAgvPSEoAhUMeEseTdiqNbRdub" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/90" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmYW6aLRpRoFqL6CR7j3FKixQzHL5hsqj24KCLEgjce2hV" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 91</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmYW6aLRpRoFqL6CR7j3FKixQzHL5hsqj24KCLEgjce2hV" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/91" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmWR8LN7UeE6VmTsQ4c4pZWheoEosePuRjAxSURUg1dHHp" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 92</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmWR8LN7UeE6VmTsQ4c4pZWheoEosePuRjAxSURUg1dHHp" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/92" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmNfQ9TatE2G59tW2muMXA3bueH4JXR5pNaTwwHxpXuVpS" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 93</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmNfQ9TatE2G59tW2muMXA3bueH4JXR5pNaTwwHxpXuVpS" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/93" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmPn7G4VEK8anjnmKdnbiH4oyRGptyfBtG1G59s31GiWqA" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 94</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmPn7G4VEK8anjnmKdnbiH4oyRGptyfBtG1G59s31GiWqA" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/94" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmSFqoj2NujNdMSdmxBzAScHbXRn48ZpMAHvLhrXsSmm6m" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 95</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmSFqoj2NujNdMSdmxBzAScHbXRn48ZpMAHvLhrXsSmm6m" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/95" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmZxX7SEMVgiBKTyZhFwSoBbrPKjb2q8LeKkcC4Z1TWueY" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 96</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmZxX7SEMVgiBKTyZhFwSoBbrPKjb2q8LeKkcC4Z1TWueY" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/96" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmdRbJZ3zvv4mYFrFytrx4TRyqVquJKtF2V4oEnTBFnHQh" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 97</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmdRbJZ3zvv4mYFrFytrx4TRyqVquJKtF2V4oEnTBFnHQh" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/97" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmZRdDNKy3b9WcWZDZpxE77Kz9ytM9gMU9G6J3q8AjBPcX" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 98</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmZRdDNKy3b9WcWZDZpxE77Kz9ytM9gMU9G6J3q8AjBPcX" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/98" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmPoc2UqoZrhR6T5gPL4GhRbY8ra2TnxMsRbyNY5SKy8or" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 99</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmPoc2UqoZrhR6T5gPL4GhRbY8ra2TnxMsRbyNY5SKy8or" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/99" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/Qma3YgetozWKU8rPjDnBRmG7cKTr3AEuY6fZtEu82dmQ3v" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 100</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/Qma3YgetozWKU8rPjDnBRmG7cKTr3AEuY6fZtEu82dmQ3v" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/100" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card mb-4 shadow p-2 bg-body rounded">
+              <img class="card-img-top" src="./img/QmeK9pDP3pbMQVTYt7WAVQ4LpgoqJ3p1GdgQ5BaUGUVsKq" />
+              <div class="card-caption col-12 p-0">
+                <div class="card-body">
+                  <div class="text-center fs-5 text-secondary mb-2 fw-bold">
+                    <span>Token ID: 101</span>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-dark btn-info" href="https://spardawallet.mypinata.cloud/ipfs/QmeK9pDP3pbMQVTYt7WAVQ4LpgoqJ3p1GdgQ5BaUGUVsKq" role="button">
+                      Open IPFS
+                    </a>
+                    <a class="btn btn-dark btn-info" href="https://zilswap.io/arky/collections/zil1nfuy0fuvdun80m6f5vxfqycz0caphpf8tksmlt/101" role="button">
+                      Open on Arky
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
     <div class="footer-dark mt-5">
