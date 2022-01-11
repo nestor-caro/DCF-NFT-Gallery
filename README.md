@@ -10,7 +10,9 @@ Dopecrewfriends.com is a website created to provide information about the Dope C
 * Web3 integration: after connect your zil wallet using zilpay you will have access to your NFTs, you can transfer, burn, and see all the information available.
 * and more..
 
+Additional notes:
 Dope Crew Friends is a ZRC-1 NFT Token that lives on Zilliqa Blockchain. 
+This website is currently hosted on a static aws s3 server.
 
 --
 Nestor Caro
